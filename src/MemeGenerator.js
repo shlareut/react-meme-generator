@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import styles from './MemeGenerator.module.scss';
 
 export default function MemeGenerator() {
-  const initialTopText = '';
+  const initialTopText = ' ';
   const [topText, setTopText] = useState(initialTopText);
-  const initialBottomText = '';
+  const initialBottomText = ' ';
   const [bottomText, setBottomText] = useState(initialBottomText);
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src="https://api.memegen.link/images/doge/such_meme/very_wow.png?height=250&width=250" />
+        <img
+          src={`https://api.memegen.link/images/doge/${topText}/${bottomText}.png?height=250&width=250`}
+        />
       </div>
       <div className={styles.inputfields}>
         <label for="template">Meme template</label>
