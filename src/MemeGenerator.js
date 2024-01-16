@@ -52,9 +52,6 @@ export default function MemeGenerator() {
         />
       </div>
       <div className={styles.button}>Download</div>
-      {/* Below is just for reference and test code */}
-      <p>{topText}</p>
-      <p>{bottomText}</p>
     </div>
   );
 }
