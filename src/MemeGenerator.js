@@ -6,16 +6,28 @@ export default function MemeGenerator() {
   const [topText, setTopText] = useState(initialTopText);
   const initialBottomText = ' ';
   const [bottomText, setBottomText] = useState(initialBottomText);
+  const initialMeme = 'doge';
+  const [meme, setMeme] = useState(initialMeme);
   return (
     <div className={styles.container}>
       <div className={styles.image}>
         <img
-          src={`https://api.memegen.link/images/doge/${topText}/${bottomText}.png?height=250&width=250`}
+          src={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
         />
       </div>
       <div className={styles.inputfields}>
         <label for="template">Meme template</label>
-        <select id="template" name="template" />
+        <select
+          id="template"
+          name="template"
+          onChange={(event) => {
+            const newMeme = event.currentTarget.value;
+            setMeme(newMeme);
+          }}
+        >
+          <option value="doge">doge</option>
+          <option value="buzz">buzz</option>
+        </select>
         <label for="toptext">Top text</label>
         <input
           type="text"
