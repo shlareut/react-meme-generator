@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import styles from './MemeGenerator.module.scss';
+import templates from './memeTemplates.json';
 
 export default function MemeGenerator() {
   const initialTopText = ' ';
   const [topText, setTopText] = useState(initialTopText);
   const initialBottomText = ' ';
   const [bottomText, setBottomText] = useState(initialBottomText);
-  const initialMeme = 'doge';
+  // Making the first image in memeTemplates.json the default image on page load
+  const initialMeme = 'aag';
   const [meme, setMeme] = useState(initialMeme);
   return (
     <div className={styles.container}>
       <div className={styles.image}>
+        {/* POTENTIAL BREAKING POINT This image element should show a working image when the page first loads */}
         <img
+          data-test-id="meme-image"
           src={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
         />
       </div>
@@ -25,8 +29,10 @@ export default function MemeGenerator() {
             setMeme(newMeme);
           }}
         >
-          <option value="doge">doge</option>
-          <option value="buzz">buzz</option>
+          {/* Use static file memeTemplates.json to create a map of selector options directly from the json file */}
+          {templates.map((item) => (
+            <option value={`${item.id}`}>{item.id}</option>
+          ))}
         </select>
         <label for="toptext">Top text</label>
         <input
