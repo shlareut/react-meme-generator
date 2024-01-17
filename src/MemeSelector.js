@@ -14,7 +14,7 @@ export default function MemeSelector(props) {
       >
         {/* Use static file memeTemplates.json to create a map of selector options directly from the json file */}
         {templates.map((item) => (
-          <option key={`${item.id}`} value={`${item.id}`}>
+          <option key={`meme-${item.id}`} value={item.id}>
             {item.id}
           </option>
         ))}
