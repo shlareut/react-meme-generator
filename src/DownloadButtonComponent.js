@@ -5,7 +5,6 @@ import styles from './DownloadButtonComponent.module.scss';
 // Download button that triggers the download of the file.
 export default function DownloadButtonComponent(props) {
   return (
-    // Trigger file download by clicking the button.
     <button
       className={styles.button}
       onClick={() => {
