@@ -10,7 +10,7 @@ import TopTextInput from './TopTextInput';
 export default function App() {
   const initialTopText = ' ';
   const [topText, setTopText] = useState(initialTopText);
-  const initialBottomText = ' ';
+  const initialBottomText = '';
   const [bottomText, setBottomText] = useState(initialBottomText);
   const initialMeme = 'aag';
   const [meme, setMeme] = useState(initialMeme);
