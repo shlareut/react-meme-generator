@@ -9,7 +9,7 @@ export default function TopTextInput(props) {
         value={props.topText}
         onChange={(event) => {
           const newTopText = event.currentTarget.value;
-          props.setTopText(newTopText);
+          props.handleTopText(newTopText);
         }}
       />
     </div>

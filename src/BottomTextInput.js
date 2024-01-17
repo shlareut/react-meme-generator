@@ -9,7 +9,7 @@ export default function BottomTextInput(props) {
         value={props.bottomText}
         onChange={(event) => {
           const newBottomText = event.currentTarget.value;
-          props.setBottomText(newBottomText);
+          props.handleBottomText(newBottomText);
         }}
       />
     </div>
