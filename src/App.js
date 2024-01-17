@@ -8,7 +8,7 @@ import TextInputFieldComponent from './TextInputFieldComponent';
 
 export default function App() {
   // Define top text state
-  const initialTopText = ' ';
+  const initialTopText = '';
   const [topText, setTopText] = useState(initialTopText);
   // Define bottom text state
   const initialBottomText = '';
@@ -23,7 +23,7 @@ export default function App() {
       <ImageDisplayComponent
         testId="meme-image"
         alt="funny meme"
-        url={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
+        url={`https://api.memegen.link/images/${meme}/ ${topText}/${bottomText}.png?height=250&width=250`}
       />
       <div className={styles.inputFields}>
         {/* Insert dropdown / selector component */}
