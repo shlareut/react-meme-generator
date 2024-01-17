@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styles from './ImageRender.module.scss';
 
 export default function ImageRender(props) {
