@@ -1,6 +1,6 @@
-import styles from './ImageRender.module.scss';
+import styles from './ImageDisplayComponent.module.scss';
 
-export default function ImageRender(props) {
+export default function ImageDisplayComponent(props) {
   return (
     <img
       className={styles.image}

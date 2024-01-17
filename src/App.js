@@ -1,11 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
 import styles from './App.module.scss';
-import BottomTextInput from './BottomTextInput';
-import DownloadButton from './DownloadButton';
-import ImageRender from './ImageRender';
-import MemeSelector from './MemeSelector';
-import TopTextInput from './TopTextInput';
+import DownloadButtonComponent from './DownloadButtonComponent';
+import ImageDisplayComponent from './ImageDisplayComponent';
+import SelectorComponent from './SelectorComponent';
+import TextInputFieldComponent from './TextInputFieldComponent';
 
 export default function App() {
   // Define top text state
@@ -21,18 +20,39 @@ export default function App() {
     // Wrap entire widget in div containers for easier styling
     <div className={styles.container}>
       {/* Insert image render component and ingest props from input fields */}
-      <ImageRender topText={topText} bottomText={bottomText} meme={meme} />
+      <ImageDisplayComponent
+        topText={topText}
+        bottomText={bottomText}
+        meme={meme}
+      />
       <div className={styles.inputFields}>
-        {/* Insert input field components and ingest props */}
-        <MemeSelector meme={meme} setMeme={setMeme} />
-        <TopTextInput topText={topText} setTopText={setTopText} />
-        <BottomTextInput
-          bottomText={bottomText}
-          setBottomText={setBottomText}
+        {/* Insert dropdown / selector component */}
+        <SelectorComponent
+          value={meme}
+          setValue={setMeme}
+          type="memeTemplate"
+          title="Meme template"
+        />
+        {/* Reuse text input component for both text input fields. */}
+        <TextInputFieldComponent
+          text={topText}
+          setText={setTopText}
+          type="topText"
+          title="Top text"
+        />
+        <TextInputFieldComponent
+          text={bottomText}
+          setText={setBottomText}
+          type="bottomText"
+          title="Bottom text"
         />
       </div>
       {/* Insert download button component and ingest props from input fields */}
-      <DownloadButton topText={topText} bottomText={bottomText} meme={meme} />
+      <DownloadButtonComponent
+        topText={topText}
+        bottomText={bottomText}
+        meme={meme}
+      />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 // Import file-saver package to get access to file system.
 import { saveAs } from 'file-saver';
-import styles from './DownloadButton.module.scss';
+import styles from './DownloadButtonComponent.module.scss';
 
-// Download button that triggers the download of the generated image.
-export default function DownloadButton(props) {
-  const downloadImage = () => {
+// Download button that triggers the download of the file.
+export default function DownloadButtonComponent(props) {
+  const downloadFile = () => {
     // Meme API allows direct URL manipulation which simplifies the generation process. Use props for naming the File.
     saveAs(
       `https://api.memegen.link/images/${props.meme}/${props.topText}/${props.bottomText}.png?height=250&width=250`,
@@ -12,11 +12,11 @@ export default function DownloadButton(props) {
     );
   };
   return (
-    // Trigger image download by clicking the button.
+    // Trigger file download by clicking the button.
     <button
       className={styles.button}
       onClick={() => {
-        downloadImage();
+        downloadFile();
       }}
     >
       Download
