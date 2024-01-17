@@ -11,21 +11,21 @@ export default function App() {
   // Define top text state
   const initialTopText = ' ';
   const [topText, setTopText] = useState(initialTopText);
-  // Lifting top text state one level up
+  // Lifting top text state up
   const handleTopText = (newTopText) => {
     setTopText(newTopText);
   };
   // Define bottom text state
   const initialBottomText = '';
   const [bottomText, setBottomText] = useState(initialBottomText);
-  // Lifting bottom text state one level up
+  // Lifting bottom text state up
   const handleBottomText = (newBottomText) => {
     setBottomText(newBottomText);
   };
   // Define default meme template and meme state
-  // Lifting meme state one level up
   const initialMeme = 'aag';
   const [meme, setMeme] = useState(initialMeme);
+  // Lifting meme state up
   const handleMeme = (newMeme) => {
     setMeme(newMeme);
   };
