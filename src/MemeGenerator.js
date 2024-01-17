@@ -16,11 +16,12 @@ export default function MemeGenerator() {
         {/* POTENTIAL BREAKING POINT This image element should show a working image when the page first loads */}
         <img
           data-test-id="meme-image"
+          alt="funny meme"
           src={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
         />
       </div>
       <div className={styles.inputfields}>
-        <label for="template">Meme template</label>
+        <label htmlFor="template">Meme template</label>
         <select
           id="template"
           name="template"
@@ -31,12 +32,13 @@ export default function MemeGenerator() {
         >
           {/* Use static file memeTemplates.json to create a map of selector options directly from the json file */}
           {templates.map((item) => (
-            <option value={`${item.id}`}>{item.id}</option>
+            <option key={`${item.id}`} value={`${item.id}`}>
+              {item.id}
+            </option>
           ))}
         </select>
-        <label for="toptext">Top text</label>
+        <label htmlFor="toptext">Top text</label>
         <input
-          type="text"
           id="toptext"
           name="toptext"
           value={topText}
@@ -45,9 +47,8 @@ export default function MemeGenerator() {
             setTopText(newTopText);
           }}
         />
-        <label for="bottomtext">Bottom text</label>
+        <label htmlFor="bottomtext">Bottom text</label>
         <input
-          type="text"
           id="bottomtext"
           name="bottomtext"
           value={bottomText}
