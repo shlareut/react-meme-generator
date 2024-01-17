@@ -1,5 +1,7 @@
+// Import JSON file for defining the dropdown options.
 import templates from './memeTemplates.json';
 
+// Selector controlling the meme template.
 export default function MemeSelector(props) {
   return (
     <div>
@@ -12,7 +14,8 @@ export default function MemeSelector(props) {
           props.setMeme(newMeme);
         }}
       >
-        {/* Use static file memeTemplates.json to create a map of selector options directly from the json file */}
+        {/* Iterate through static JSON file and map the meme id into a new array. */}
+        {/* Use the new meme-id array for creating dropdown options */}
         {templates.map((item) => (
           <option key={`meme-${item.id}`} value={item.id}>
             {item.id}

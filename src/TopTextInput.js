@@ -1,3 +1,4 @@
+// Input field controlling the top text of the meme.
 export default function TopTextInput(props) {
   return (
     <div>

@@ -1,3 +1,4 @@
+// Input field controlling the bottom text of the meme.
 export default function BottomTextInput(props) {
   return (
     <div>
