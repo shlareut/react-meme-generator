@@ -11,7 +11,7 @@ export default function MemeSelector(props) {
         name="template"
         onChange={(event) => {
           const newMeme = event.currentTarget.value;
-          props.handleMeme(newMeme);
+          props.setMeme(newMeme);
         }}
       >
         {/* Iterate through static JSON file and map the meme id into a new array. */}

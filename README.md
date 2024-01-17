@@ -18,4 +18,5 @@ This react meme generator was created as part of the UpLeveled GmbH coding boot 
 
 - Design was created in Figma and then manually created with css (not exported).
 - Each element with functionality is split into separate react components (image display, each input field, download button).
+- All states are lifted up to the App.js component.
 - A JSON file from "memegen.link" has been used to generate a list of all available meme templates.
