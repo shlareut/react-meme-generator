@@ -28,8 +28,8 @@ export default function App() {
       <div className={styles.inputFields}>
         {/* Insert dropdown / selector component */}
         <SelectorComponent
-          value={meme}
-          setValue={setMeme}
+          item={meme}
+          setItem={setMeme}
           type="memeTemplate"
           title="Meme template"
         />
@@ -51,7 +51,7 @@ export default function App() {
       <DownloadButtonComponent
         title="Download"
         url={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
-        fileName={`meme-${meme}-${topText}-${bottomText}.jpg`}
+        fileName={`meme-${meme}${topText}${bottomText}.jpg`}
       />
     </div>
   );

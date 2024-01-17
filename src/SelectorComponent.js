@@ -10,8 +10,8 @@ export default function SelectorComponent(props) {
         id={props.type}
         name={props.type}
         onChange={(event) => {
-          const newValue = event.currentTarget.value;
-          props.setValue(newValue);
+          const newItem = event.currentTarget.value;
+          props.setItem(newItem);
         }}
       >
         {/* Iterate through static JSON file and map id's into a new array. */}
