@@ -4,10 +4,10 @@ export default function ImageDisplayComponent(props) {
   return (
     <img
       className={styles.image}
-      data-test-id="meme-image"
-      alt="funny meme"
+      data-test-id={props.testId}
+      alt={props.alt}
       // Meme API allows direct URL maipulation which simplifies the image generation process.
-      src={`https://api.memegen.link/images/${props.meme}/${props.topText}/${props.bottomText}.png?height=250&width=250`}
+      src={props.url}
     />
   );
 }

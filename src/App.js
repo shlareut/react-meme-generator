@@ -21,9 +21,9 @@ export default function App() {
     <div className={styles.container}>
       {/* Insert image render component and ingest props from input fields */}
       <ImageDisplayComponent
-        topText={topText}
-        bottomText={bottomText}
-        meme={meme}
+        testId="meme-image"
+        alt="funny meme"
+        url={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
       />
       <div className={styles.inputFields}>
         {/* Insert dropdown / selector component */}
