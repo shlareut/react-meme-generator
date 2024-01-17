@@ -19,7 +19,7 @@ export default function App() {
   return (
     // Wrap entire widget in div containers for easier styling
     <div className={styles.container}>
-      {/* Insert image render component and ingest props from input fields */}
+      {/* Insert image display component and ingest props */}
       <ImageDisplayComponent
         testId="meme-image"
         alt="funny meme"
@@ -47,11 +47,11 @@ export default function App() {
           title="Bottom text"
         />
       </div>
-      {/* Insert download button component and ingest props from input fields */}
+      {/* Insert download button component and ingest props */}
       <DownloadButtonComponent
-        topText={topText}
-        bottomText={bottomText}
-        meme={meme}
+        title="Download"
+        url={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
+        fileName={`meme-${meme}-${topText}-${bottomText}.jpg`}
       />
     </div>
   );
