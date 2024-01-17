@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './MemeGenerator.module.scss';
 import templates from './memeTemplates.json';
 
+// DEPRECATED!!!
+
 export default function MemeGenerator() {
   const initialTopText = ' ';
   const [topText, setTopText] = useState(initialTopText);

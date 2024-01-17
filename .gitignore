@@ -24,3 +24,6 @@ yarn-error.log*
 
 .eslintcache
 *.tsbuildinfo
+
+/src/MemeGenerator.js
+/src/MemeGenerator.module.scss
