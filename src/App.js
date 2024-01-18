@@ -19,10 +19,12 @@ export default function App() {
   return (
     // Wrap entire widget in div containers for easier styling
     <div className={styles.container}>
-      {/* Insert image display component and ingest props */}
+      {/* Insert image display component and pass props */}
       <ImageDisplayComponent
         testId="meme-image"
         alt="funny meme"
+        // Manipulate URL with variables directly before passing it as a prop.
+        // Leave a deliberate space before topText as the application would break with an empty string.
         url={`https://api.memegen.link/images/${meme}/ ${topText}/${bottomText}.png?height=250&width=250`}
       />
       <div className={styles.inputFields}>
@@ -47,9 +49,10 @@ export default function App() {
           title="Bottom text"
         />
       </div>
-      {/* Insert download button component and ingest props */}
+      {/* Insert download button component and pass props */}
       <DownloadButtonComponent
         title="Download"
+        // Manipulate URL and file name with variables directly before passing them as props.
         url={`https://api.memegen.link/images/${meme}/${topText}/${bottomText}.png?height=250&width=250`}
         fileName={`meme-${meme}${topText}${bottomText}.jpg`}
       />

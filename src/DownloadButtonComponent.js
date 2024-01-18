@@ -2,7 +2,7 @@
 import { saveAs } from 'file-saver';
 import styles from './DownloadButtonComponent.module.scss';
 
-// Download button that triggers the download of the file.
+// Download button that triggers the file download with a given url.
 export default function DownloadButtonComponent(props) {
   return (
     <button
