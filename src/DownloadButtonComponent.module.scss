@@ -2,10 +2,9 @@
   height: 50px;
   font-size: 20px;
   border: 0px;
-}
-
-.button:hover {
-  font-weight: 600;
-  text-decoration: underline;
-  color: #ec496a;
+  &:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #ec496a;
+  }
 }
