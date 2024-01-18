@@ -8,7 +8,6 @@ import TextInputFieldComponent from './TextInputFieldComponent';
 
 export default function App() {
   // Define top text state
-  // Application breaks if I remove the space - need to implement an if-else statement. If top is empty and only bottom is there, it should still work. So it should transform the URL accordingly
   const initialTopText = '';
   const [topText, setTopText] = useState(initialTopText);
   // Define bottom text state
